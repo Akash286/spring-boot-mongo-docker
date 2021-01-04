@@ -15,11 +15,11 @@ node
     {
         sh "${mavenHome}/bin/mvn clean package"
     }
-    /*stage('creating images with docker')
+    stage('creating images with docker')
     {
         sh "docker build -t dockerakashde/spring-boot-mongo:${buildNumber} ."
     }
-    stage('docker login and push')
+   /* stage('docker login and push')
     {
        withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
     // some block
