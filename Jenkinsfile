@@ -15,7 +15,7 @@ node
     {
         sh "${mavenHome}/bin/mvn clean package"
     }
-    stage('creating images with docker')
+    /*stage('creating images with docker')
     {
         sh "docker build -t dockerakashde/spring-boot-mongo:${buildNumber} ."
     }
@@ -27,7 +27,7 @@ node
 }
     sh "docker push  dockerakashde/spring-boot-mongo:${buildNumber}"
         
-    }
+    }*/
     stage('running App in remote server')
     {
        // sshagent(['024b57d3-84f3-431e-8b49-faaea1760c6f']) {
