@@ -19,7 +19,7 @@ node
     {
         sh "docker build -t dockerakashde/spring-boot-mongo:${buildNumber} ."
     }
-   /* stage('docker login and push')
+    stage('docker login and push')
     {
        withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
     // some block
@@ -27,7 +27,7 @@ node
 }
     sh "docker push  dockerakashde/spring-boot-mongo:${buildNumber}"
         
-    }*/
+    }
     stage('running App in remote server')
     {
        // sshagent(['024b57d3-84f3-431e-8b49-faaea1760c6f']) {
