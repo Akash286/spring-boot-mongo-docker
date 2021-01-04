@@ -30,9 +30,9 @@ node
     }
     stage('running App in remote server')
     {
-        sshagent(['024b57d3-84f3-431e-8b49-faaea1760c6f']) {
+       // sshagent(['024b57d3-84f3-431e-8b49-faaea1760c6f']) {
     // some block
-    sh "ssh -o StrictHostKeyChecking=no ec2-user@15.207.18.121 docker-compose -f docker-compose.yml up -d"
-}
+    sh "docker-compose -f docker-compose.yml up -d"
+// }
     }
 }
